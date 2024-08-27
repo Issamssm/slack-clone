@@ -14,7 +14,6 @@ import { useCreateWorkspaceModal } from "@/features/workspaces/store/use-create-
 
 import { useWorkspaceId } from "@/hooks/use-workspace-id";
 import { Loader, Plus } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 
 export const WorkspaceSwitcher = () => {
@@ -34,18 +33,16 @@ export const WorkspaceSwitcher = () => {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger>
-                <div
-                    className={cn(
-                        "size-9 relative overflow-hidden bg-[#ABABAD] hover:bg-[#ABABAD]/80 text-xl text-slate-800 font-semibold inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-                    )}
+            <DropdownMenuTrigger asChild>
+                <Button
+                    className="size-9 relative overflow-hidden bg-[#ABABAD] hover:bg-[#ABABAD]/80 text-xl text-slate-800 font-semibold"
                 >
                     {workspaceLoading ? (
                         <Loader className="size-5 animate-spin shrink-0" />
                     ) : (
                         workspace?.name.charAt(0).toUpperCase()
                     )}
-                </div>
+                </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent side="bottom" align="start" className="w-64">
                 <DropdownMenuItem

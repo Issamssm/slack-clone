@@ -9,7 +9,7 @@ const WorkSpaceIdPage = () => {
 
   return (
     <div>
-      Data: {JSON.stringify(data)}
+      Data: { data?.name }
     </div>
   )
 }

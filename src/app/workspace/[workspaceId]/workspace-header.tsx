@@ -49,7 +49,7 @@ export const WorkspaceHeader = ({ workspace, isAdmin }: WorkspaceHeaderProps) =>
               <>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
-                  className="cursor-pointer py-2"
+                  className="cursor-pointer py-2 break-all"
                   onClick={() => { }}
                 >
                   invite people to {workspace.name}

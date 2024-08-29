@@ -49,7 +49,7 @@ export const WorkspaceSwitcher = () => {
                     onClick={() => router.push(`/workspace/${workspaceId}`)}
                     className="overflow-hidden cursor-pointer flex-col justify-start items-start capitalize"
                 >
-                    {workspace?.name}
+                    <p className="break-all">{workspace?.name}</p>
                     <span className="text-xs text-muted-foreground">
                         Active workspace
                     </span>
